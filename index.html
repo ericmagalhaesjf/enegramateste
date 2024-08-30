@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste de Eneagrama</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f7f9fc;
+            color: #333;
+        }
+        header {
+            background: #0056b3;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        header h1 {
+            font-size: 2.5em;
+            margin: 0;
+        }
+        header p {
+            font-size: 1.2em;
+            margin: 0;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: #0056b3;
+            font-size: 2em;
+            border-bottom: 2px solid #0056b3;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        .question {
+            margin-bottom: 20px;
+        }
+        .question h2 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+        .question label {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 1.1em;
+        }
+        .question input[type="radio"] {
+            margin-right: 10px;
+        }
+        .question input[type="radio"] + label {
+            margin-right: 20px;
+        }
+        .cta {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .cta button {
+            background: #0056b3;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 15px 30px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background 0.3s, transform 0.3s;
+        }
+        .cta button:hover {
+            background: #003d7a;
+            transform: scale(1.05);
+        }
+        .description {
+            margin-top: 40px;
+            padding: 20px;
+            background: #e9ecef;
+            border-radius: 8px;
+            display: none;
+        }
+        .description h3 {
+            color: #0056b3;
+        }
+        .description p {
+            font-size: 1.1em;
+        }
+        .result {
+            font-size: 1.2em;
+            margin: 20px 0;
+            padding: 20px;
+            background: #d4edda;
+            color: #155724;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Teste de Eneagrama</h1>
+        <p>Descubra seu tipo de personalidade e compreenda melhor suas motivações e comportamentos.</p>
+    </header>
+
+    <div class="container">
+        <form id="enneagram-test">
+            <div class="question">
+                <h2>Pergunta 1:</h2>
+                <label><input type="radio" name="q1" value="1"> A) Você se sente mais confortável com regras e estruturas ou com liberdade para improvisar?</label>
+                <label><input type="radio" name="q1" value="2"> B) Você busca ser reconhecido por suas conquistas ou por sua capacidade de ajudar os outros?</label>
+                <label><input type="radio" name="q1" value="3"> C) Você prefere se basear em dados e lógica ou em intuição e sentimentos?</label>
+            </div>
+
+            <div class="question">
+                <h2>Pergunta 2:</h2>
+                <label><input type="radio" name="q2" value="1"> A) Você valoriza a estabilidade e previsibilidade ou se sente mais animado com mudanças e novas experiências?</label>
+                <label><input type="radio" name="q2" value="2"> B) Você se sente realizado ao apoiar os outros ou ao alcançar suas próprias metas e realizações?</label>
+                <label><input type="radio" name="q2" value="3"> C) Você toma decisões com base em análise detalhada ou em uma visão geral intuitiva?</label>
+            </div>
+
+            <div class="question">
+                <h2>Pergunta 3:</h2>
+                <label><input type="radio" name="q3" value="1"> A) Você prefere um ambiente de trabalho bem estruturado ou um onde possa experimentar e inovar?</label>
+                <label><input type="radio" name="q3" value="2"> B) Você se sente mais confortável assumindo um papel de apoio ou liderando e tomando decisões importantes?</label>
+                <label><input type="radio" name="q3" value="3"> C) Você valoriza mais a precisão e o detalhe ou a visão geral e a flexibilidade?</label>
+            </div>
+
+            <div class="question">
+                <h2>Pergunta 4:</h2>
+                <label><input type="radio" name="q4" value="1"> A) Você tende a seguir um plano detalhado ou prefere improvisar conforme as circunstâncias?</label>
+                <label><input type="radio" name="q4" value="2"> B) Você se sente mais motivado por feedback positivo dos outros ou por seu próprio progresso e conquistas?</label>
+                <label><input type="radio" name="q4" value="3"> C) Você usa mais a lógica para resolver problemas ou sua intuição e sentimentos?</label>
+            </div>
+
+            <div class="question">
+                <h2>Pergunta 5:</h2>
+                <label><input type="radio" name="q5" value="1"> A) Você valoriza mais a segurança e a previsibilidade ou a liberdade para explorar novas ideias?</label>
+                <label><input type="radio" name="q5" value="2"> B) Você se sente mais satisfeito quando ajuda os outros ou quando realiza suas próprias metas?</label>
+                <label><input type="radio" name="q5" value="3"> C) Você tende a analisar minuciosamente os detalhes ou a confiar em sua percepção geral?</label>
+            </div>
+
+            <div class="question">
+                <h2>Pergunta 6:</h2>
+                <label><input type="radio" name="q6" value="1"> A) Você prefere manter uma rotina estabelecida ou se adapta facilmente a mudanças?</label>
+                <label><input type="radio" name="q6" value="2"> B) Você se sente mais confortável sendo um suporte constante para os outros ou tomando a iniciativa em projetos?</label>
+                <label><input type="radio" name="q6" value="3"> C) Você resolve problemas com base em dados concretos ou em suas impressões e intuições?</label>
+            </div>
+
+            <div class="question">
+                <h2>Pergunta 7:</h2>
+                <label><input type="radio" name="q7" value="1"> A) Você valoriza mais a ordem e a organização ou a criatividade e a inovação?</label>
+                <label><input type="radio" name="q7" value="2"> B) Você se sente realizado ao contribuir para o bem-estar dos outros ou ao alcançar suas próprias conquistas?</label>
+                <label><input type="radio" name="q7" value="3"> C) Você tende a planejar seus passos com antecedência ou age com base nas circunstâncias presentes?</label>
+            </div>
+
+            <div class="question">
+                <h2>Pergunta 8:</h2>
+                <label><input type="radio" name="q8" value="1"> A) Você prefere um ambiente estruturado e previsível ou um onde possa explorar e experimentar?</label>
+                <label><input type="radio" name="q8" value="2"> B) Você se sente mais energizado ao ajudar os outros ou ao alcançar novos marcos pessoais?</label>
+                <label><input type="radio" name="q8" value="3"> C) Você tende a usar a lógica e a análise para tomar decisões ou se baseia mais em sua intuição e sentimentos?</label>
+            </div>
+
+            <div class="question">
+                <h2>Pergunta 9:</h2>
+                <label><input type="radio" name="q9" value="1"> A) Você valoriza mais a previsibilidade e a segurança ou a liberdade para inovar e criar?</label>
+                <label><input type="radio" name="q9" value="2"> B) Você se sente mais satisfeito ao apoiar os outros ou ao alcançar seus próprios objetivos?</label>
+                <label><input type="radio" name="q9" value="3"> C) Você toma decisões com base em dados objetivos ou em sua própria intuição?</label>
+            </div>
+
+            <div class="question">
+                <h2>Pergunta 10:</h2>
+                <label><input type="radio" name="q10" value="1"> A) Você prefere manter uma rotina regular ou se adaptar facilmente a novas situações?</label>
+                <label><input type="radio" name="q10" value="2"> B) Você se sente mais realizado quando ajuda os outros ou quando atinge seus próprios objetivos?</label>
+                <label><input type="radio" name="q10" value="3"> C) Você resolve problemas com base em uma análise detalhada ou em sua intuição e percepção?</label>
+            </div>
+
+            <div class="question">
+                <h2>Pergunta 11:</h2>
+                <label><input type="radio" name="q11" value="1"> A) Você valoriza mais a estabilidade e a ordem ou a possibilidade de experimentar e inovar?</label>
+                <label><input type="radio" name="q11" value="2"> B) Você se sente mais motivado ao apoiar os outros ou ao conquistar novos marcos pessoais?</label>
+                <label><input type="radio" name="q11" value="3"> C) Você toma decisões com base em dados e evidências ou em sua intuição e sentimentos?</label>
+            </div>
+
+            <div class="question">
+                <h2>Pergunta 12:</h2>
+                <label><input type="radio" name="q12" value="1"> A) Você prefere seguir um plano estruturado ou se adaptar a novas oportunidades conforme elas surgem?</label>
+                <label><input type="radio" name="q12" value="2"> B) Você se sente mais realizado ajudando os outros ou alcançando suas próprias metas?</label>
+                <label><input type="radio" name="q12" value="3"> C) Você resolve problemas com uma abordagem lógica e detalhada ou confia mais em sua intuição e percepção geral?</label>
+            </div>
+
+            <div class="cta">
+                <button type="submit">Enviar Respostas</button>
+            </div>
+        </form>
+
+        <div id="result" class="result"></div>
+        <div id="description" class="description">
+            <h3>Descrição dos Tipos de Personalidade</h3>
+            <div>
+                <h4>Tipo 1: O Perfeccionista</h4>
+                <p>Você é alguém que valoriza a ordem e a integridade, buscando sempre fazer o melhor possível. Seu desejo de melhorar as coisas e alcançar padrões elevados pode levar à autocobrança e à crítica, mas também demonstra um profundo compromisso com a excelência e a justiça.</p>
+            </div>
+            <div>
+                <h4>Tipo 2: O Prestativo</h4>
+                <p>Você é generoso e atencioso, sempre pronto para ajudar os outros e criar conexões significativas. Seu desejo de ser amado e apreciado pode fazer com que você coloque as necessidades dos outros à frente das suas, mas sua empatia e dedicação são inestimáveis para aqueles ao seu redor.</p>
+            </div>
+            <div>
+                <h4>Tipo 3: O Realizador</h4>
+                <p>Você é motivado pelo desejo de alcançar sucesso e reconhecimento. Seu foco em metas e realizações faz de você um líder natural, sempre buscando se destacar e motivar os outros. Sua capacidade de transformar objetivos em resultados é um reflexo do seu compromisso com a excelência.</p>
+            </div>
+            <div>
+                <h4>Tipo 4: O Individualista</h4>
+                <p>Você valoriza a autenticidade e a expressão pessoal, buscando significado profundo e uma conexão verdadeira com seu eu interior. Sua sensibilidade e criatividade trazem uma perspectiva única para a vida, e seu desejo de encontrar e expressar sua identidade é central para sua personalidade.</p>
+            </div>
+            <div>
+                <h4>Tipo 5: O Investigador</h4>
+                <p>Você é um pensador profundo, buscando compreender o mundo através da análise e da observação. Sua curiosidade intelectual e desejo de autonomia o levam a buscar conhecimento e a manter a privacidade. Sua capacidade de adquirir e aplicar insights é uma característica marcante de sua personalidade.</p>
+            </div>
+            <div>
+                <h4>Tipo 6: O Leal</h4>
+                <p>Você é confiável e comprometido, sempre buscando segurança e estabilidade. Sua lealdade e capacidade de antecipar problemas fazem de você um apoio constante para os outros. Sua dedicação à proteção e ao bem-estar daqueles ao seu redor demonstra um profundo senso de responsabilidade.</p>
+            </div>
+            <div>
+                <h4>Tipo 7: O Entusiasta</h4>
+                <p>Você é vibrante e otimista, sempre buscando novas experiências e aventuras. Sua energia positiva e criatividade contagiam aqueles ao seu redor, e seu desejo de viver a vida ao máximo reflete uma abordagem entusiástica e inspiradora.</p>
+            </div>
+            <div>
+                <h4>Tipo 8: O Desafiador</h4>
+                <p>Você é forte e assertivo, com um desejo de controlar e influenciar seu ambiente. Sua coragem e determinação o tornam um líder natural, e sua capacidade de enfrentar desafios de forma direta demonstra uma grande resistência e proteção para aqueles que considera importantes.</p>
+            </div>
+            <div>
+                <h4>Tipo 9: O Pacificador</h4>
+                <p>Você valoriza a paz e a harmonia, buscando evitar conflitos e promover um ambiente tranquilo. Sua capacidade de ver o lado positivo das situações e unir diferentes perspectivas traz um senso de calma e estabilidade, criando um ambiente harmonioso ao seu redor.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('enneagram-test').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const answers = new FormData(event.target);
+            const counts = {1: 0, 2: 0, 3: 0};
+            
+            for (const [key, value] of answers.entries()) {
+                if (value in counts) {
+                    counts[value]++;
+                }
+            }
+            
+            const maxCount = Math.max(...Object.values(counts));
+            const resultType = Object.keys(counts).find(key => counts[key] === maxCount);
+
+            let resultText = '';
+            switch (resultType) {
+                case '1':
+                    resultText = 'Tipo 1: O Perfeccionista';
+                    break;
+                case '2':
+                    resultText = 'Tipo 2: O Prestativo';
+                    break;
+                case '3':
+                    resultText = 'Tipo 3: O Realizador';
+                    break;
+                default:
+                    resultText = 'Tipo não identificado';
+            }
+            
+            document.getElementById('result').innerHTML = `<p>Seu tipo de personalidade é: <strong>${resultText}</strong></p>`;
+            document.getElementById('result').style.display = 'block';
+            document.getElementById('description').style.display = 'block';
+        });
+    </script>
+</body>
+</html>
